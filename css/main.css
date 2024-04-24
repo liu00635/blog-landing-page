@@ -1,34 +1,53 @@
+/* general style */
 :root {
-    --bs-bg-primary: hsl(356, 100%, 66%);
-    --bs-bg-primary-subtle: hsl(355, 100%, 74%);
-
+    --light-red: hsl(356, 100%, 66%);
+    --very-light-red: hsl(355, 100%, 74%);
+    --very-dark-blue: hsl(208, 49%, 24%);
+    --white: hsl(0, 0%, 100%);
+    --grayish-blue: hsl(240, 2%, 79%);
+    --very-dark-grayish-blue: hsl(205, 13%, 40%);
+    --very-dark-black-blue: hsl(240, 10%, 16%);
 }
 
+.heading-custom {
+    color: var(--very-dark-blue);
+}
+
+.body-custom {
+    color: var(--very-dark-grayish-blue);
+}
+
+.btn {
+    padding: 8px 14px;
+}
+
+
 .btn-primary {
-    --bs-btn-color: var(--bs-bg-primary);
+    font-weight: 500;
+    --bs-btn-color: var(--light-red);
     --bs-btn-bg: #fff;
-    --bs-btn-border-color: var(--bs-bg-primary);
+    --bs-btn-border-color: var(--light-red);
     --bs-btn-hover-color: #fff;
-    --bs-btn-hover-bg: var(--bs-bg-primary-subtle);
-    --bs-btn-hover-border-color: var(--bs-bg-primary-subtle);
+    --bs-btn-hover-bg: var(--very-light-red);
+    --bs-btn-hover-border-color: var(--very-light-red);
     --bs-btn-focus-shadow-rgb: 49, 132, 253;
     --bs-btn-active-color: #fff;
-    --bs-btn-active-bg: --bs-bg-primary-subtle;
-    --bs-btn-active-border-color: --bs-bg-primary-subtle;
+    --bs-btn-active-bg: var(--very-light-red);
+    --bs-btn-active-border-color: var(--very-light-red);
     --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
     --bs-btn-disabled-color: #fff;
-    --bs-btn-disabled-bg: var(--bs-bg-primary);
-    --bs-btn-disabled-border-color: var(--bs-bg-primary);
+    --bs-btn-disabled-bg: var(--light-red);
+    --bs-btn-disabled-border-color: var(--light-red);
 }
 
 .btn-outline-secondary {
     --bs-btn-color: #fff;
     --bs-btn-border-color: #fff;
-    --bs-btn-hover-color: var(--bs-bg-primary-subtle);
+    --bs-btn-hover-color: var(--very-light-red);
     --bs-btn-hover-bg: #fff;
     --bs-btn-hover-border-color: #fff;
     --bs-btn-focus-shadow-rgb: 108, 117, 125;
-    --bs-btn-active-color: var(--bs-bg-primary-subtle);
+    --bs-btn-active-color: var(--very-light-red);
     --bs-btn-active-bg: #fff;
     --bs-btn-active-border-color: #fff;
     --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
@@ -38,15 +57,170 @@
     --bs-gradient: none;
 }
 
+.login-button {
+    border-color: transparent;
+}
+
 body {
     font-size: 16px;
+    font-family: "Ubuntu", sans-serif;
 }
+
+img {
+    max-width: 100%;
+}
+
 
 .display-1 {
     font-size: 3.5rem;
     font-weight: 400;
+    font-family: "Overpass", sans-serif;
 }
 
+.display-2 {
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.display-3 {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.display-4 {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.display-5 {
+    font-size: 0.8rem;
+    font-weight: 200;
+}
+
+p {
+    font-family: "Overpass", sans-serif;
+    font-weight: 300;
+}
+
+
+/* style the header section */
 header {
-    background: linear-gradient(to bottom, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+    background-image: url('/images/bg-pattern-intro-desktop.svg'), linear-gradient(to right, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+    background-size: 300% auto, cover;
+    background-position: 25%, center;
+    height: 600px;
+    width: 100%;
+    color: white;
+    text-align: center;
+    border-radius: 0 0 0 70px;
+}
+
+.img-container {
+    overflow: hidden;
+}
+
+.navbar-brand {
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.navbar {
+    padding-left: 8%;
+    padding-right: 8%;
+}
+
+/* style the sales point sections */
+
+
+#center-header {
+    padding-top: 50px !important;
+}
+
+.salepoint-1,
+.salespoint-2,
+.salepoint-3 {
+    padding: 1rem;
+}
+
+.sales-content,
+.sales-content-2,
+.sales-content-3 {
+    padding: 2rem;
+    text-align: center !important;
+}
+
+.art {
+    background-image: url('../images/bg-pattern-circles.svg'), linear-gradient(to right, hsl(237, 17%, 21%), hsl(237, 23%, 32%));
+    background-repeat: no-repeat;
+    background-size: 100% auto, cover;
+    background-position: left top 50px, top 100px;
+    height: 700px;
+    border-radius: 0 100px 0 100px;
+}
+
+
+/* style the footer area */
+ul {
+    padding-top: 1rem;
+    list-style: none;
+}
+
+li {
+    line-height: 2;
+}
+
+.footer {
+    border-radius: 0 100px 0 0;
+    padding: 10px;
+}
+
+.footer .navbar-brand {
+    padding-top: 2rem;
+}
+
+
+/* style the desktop version */
+
+@media screen and (min-width:992px) {
+    header {
+        height: 480px;
+        background-size: 150% auto, cover;
+    }
+
+    #center-header {
+        position: relative;
+        top: 80px;
+    }
+
+
+    #editor-desktop {
+        position: relative;
+        width: 130%;
+        left: 50px;
+        height: auto;
+    }
+
+    .sales-content {
+        padding-left: 8%;
+        text-align: left !important;
+    }
+
+    .flow-container {
+        height: contain;
+    }
+
+    .art {
+        padding: 3% 7%;
+        height: 480px;
+        background-size: 70% auto, cover;
+        background-position: left bottom 30px, center;
+    }
+
+    .free-power {
+        padding: 3% 7%;
+    }
+
+    .footer {
+        padding: 5% 20% 5% 10%;
+    }
 }
